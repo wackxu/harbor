@@ -2,6 +2,8 @@ module github.com/goharbor/harbor/src
 
 go 1.20
 
+require github.com/huaweicloud/huaweicloud-sdk-go-obs v3.23.4+incompatible
+
 require (
 	github.com/FZambia/sentinel v1.1.0
 	github.com/Masterminds/semver v1.5.0

@@ -33,6 +33,7 @@ import (
 	_ "github.com/docker/distribution/registry/storage/driver/oss"
 	_ "github.com/docker/distribution/registry/storage/driver/s3-aws"
 	_ "github.com/docker/distribution/registry/storage/driver/swift"
+	_ "github.com/goharbor/harbor/src/obs"
 
 	common_http "github.com/goharbor/harbor/src/common/http"
 	cfgLib "github.com/goharbor/harbor/src/lib/config"
