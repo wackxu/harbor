@@ -9,7 +9,7 @@ require (
 	github.com/Masterminds/semver v1.5.0
 	github.com/aliyun/alibaba-cloud-sdk-go v0.0.0-20190726115642-cd293c93fd97
 	github.com/asaskevich/govalidator v0.0.0-20210307081110-f21760c49a8d
-	github.com/aws/aws-sdk-go v1.34.28
+	github.com/aws/aws-sdk-go v1.43.16
 	github.com/beego/i18n v0.0.0-20140604031826-e87155e8f0c0
 	github.com/bmatcuk/doublestar v1.1.1
 	github.com/casbin/casbin v1.9.1
@@ -82,17 +82,18 @@ require (
 require (
 	github.com/beego/beego/v2 v2.0.6
 	golang.org/x/text v0.9.0
+	gopkg.in/check.v1 v1.0.0-20201130134442-10cb98267c6c
 )
 
 require (
 	cloud.google.com/go/compute v1.18.0 // indirect
 	cloud.google.com/go/compute/metadata v0.2.3 // indirect
-	github.com/Azure/azure-sdk-for-go v37.2.0+incompatible // indirect
+	github.com/Azure/azure-sdk-for-go v56.3.0+incompatible // indirect
 	github.com/Azure/go-autorest v14.2.0+incompatible // indirect
 	github.com/Azure/go-autorest/autorest v0.11.27 // indirect
 	github.com/Azure/go-autorest/autorest/adal v0.9.20 // indirect
 	github.com/Azure/go-autorest/autorest/date v0.3.0 // indirect
-	github.com/Azure/go-autorest/autorest/to v0.3.0 // indirect
+	github.com/Azure/go-autorest/autorest/to v0.4.0 // indirect
 	github.com/Azure/go-autorest/logger v0.2.1 // indirect
 	github.com/Azure/go-autorest/tracing v0.6.0 // indirect
 	github.com/Azure/go-ntlmssp v0.0.0-20200615164410-66371956d46c // indirect
@@ -121,6 +122,7 @@ require (
 	github.com/go-openapi/jsonpointer v0.19.5 // indirect
 	github.com/go-openapi/jsonreference v0.20.0 // indirect
 	github.com/go-stack/stack v1.8.0 // indirect
+	github.com/gofrs/uuid v4.0.0+incompatible // indirect
 	github.com/gogo/protobuf v1.3.2 // indirect
 	github.com/golang/protobuf v1.5.2 // indirect
 	github.com/google/certificate-transparency-go v1.0.21 // indirect
@@ -143,6 +145,8 @@ require (
 	github.com/jmespath/go-jmespath v0.4.0 // indirect
 	github.com/josharian/intern v1.0.0 // indirect
 	github.com/json-iterator/go v1.1.12 // indirect
+	github.com/kr/pretty v0.3.0 // indirect
+	github.com/kr/text v0.2.0 // indirect
 	github.com/magiconair/properties v1.8.5 // indirect
 	github.com/mailru/easyjson v0.7.6 // indirect
 	github.com/mattn/go-runewidth v0.0.9 // indirect
@@ -156,7 +160,7 @@ require (
 	github.com/prometheus/client_model v0.3.0 // indirect
 	github.com/prometheus/common v0.37.0 // indirect
 	github.com/prometheus/procfs v0.8.0 // indirect
-	github.com/satori/go.uuid v1.2.0 // indirect
+	github.com/rogpeppe/go-internal v1.6.1 // indirect
 	github.com/shiena/ansicolor v0.0.0-20200904210342-c7312218db18 // indirect
 	github.com/sirupsen/logrus v1.9.0 // indirect
 	github.com/spf13/afero v1.6.0 // indirect
