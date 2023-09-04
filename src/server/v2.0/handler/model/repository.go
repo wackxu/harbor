@@ -21,13 +21,14 @@ func (r *RepoRecord) ToSwagger() *models.Repository {
 	}
 
 	return &models.Repository{
-		CreationTime: createTime,
-		Description:  r.Description,
-		ID:           r.RepositoryID,
-		Name:         r.Name,
-		ProjectID:    r.ProjectID,
-		PullCount:    r.PullCount,
-		UpdateTime:   strfmt.DateTime(r.UpdateTime),
+		CreationTime:    createTime,
+		Description:     r.Description,
+		FullDescription: r.FullDescription,
+		ID:              r.RepositoryID,
+		Name:            r.Name,
+		ProjectID:       r.ProjectID,
+		PullCount:       r.PullCount,
+		UpdateTime:      strfmt.DateTime(r.UpdateTime),
 	}
 }
 

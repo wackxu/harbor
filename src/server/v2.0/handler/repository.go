@@ -233,10 +233,11 @@ func (r *repositoryAPI) UpdateRepository(ctx context.Context, params operation.U
 		return r.SendError(ctx, err)
 	}
 	if err := r.repoCtl.Update(ctx, &repomodel.RepoRecord{
-		RepositoryID: repository.RepositoryID,
-		Name:         repository.Name,
-		Description:  params.Repository.Description,
-	}, "Description"); err != nil {
+		RepositoryID:    repository.RepositoryID,
+		Name:            repository.Name,
+		Description:     params.Repository.Description,
+		FullDescription: params.Repository.FullDescription,
+	}, "Description", "FullDescription"); err != nil {
 		return r.SendError(ctx, err)
 	}
 	return operation.NewDeleteRepositoryOK()

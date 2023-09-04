@@ -31,14 +31,15 @@ func init() {
 
 // RepoRecord holds the record of an repository in DB, all the infos are from the registry notification event.
 type RepoRecord struct {
-	RepositoryID int64     `orm:"pk;auto;column(repository_id)" json:"repository_id"`
-	Name         string    `orm:"column(name)" json:"name"`
-	ProjectID    int64     `orm:"column(project_id)"  json:"project_id"`
-	Description  string    `orm:"column(description)" json:"description"`
-	PullCount    int64     `orm:"column(pull_count)" json:"pull_count"`
-	StarCount    int64     `orm:"column(star_count)" json:"star_count"`
-	CreationTime time.Time `orm:"column(creation_time);auto_now_add" json:"creation_time"`
-	UpdateTime   time.Time `orm:"column(update_time);auto_now" json:"update_time"`
+	RepositoryID    int64     `orm:"pk;auto;column(repository_id)" json:"repository_id"`
+	Name            string    `orm:"column(name)" json:"name"`
+	ProjectID       int64     `orm:"column(project_id)"  json:"project_id"`
+	Description     string    `orm:"column(description)" json:"description"`
+	FullDescription string    `orm:"column(full_description)" json:"full_description"`
+	PullCount       int64     `orm:"column(pull_count)" json:"pull_count"`
+	StarCount       int64     `orm:"column(star_count)" json:"star_count"`
+	CreationTime    time.Time `orm:"column(creation_time);auto_now_add" json:"creation_time"`
+	UpdateTime      time.Time `orm:"column(update_time);auto_now" json:"update_time"`
 }
 
 // FilterByBlobDigest filters the repositories by the blob digest
