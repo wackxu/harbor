@@ -6401,6 +6401,9 @@ definitions:
       full_description:
         type: string
         description: The full description of the repository
+      logo:
+        type: string
+        description: The logo url of the repository
       artifact_count:
         type: integer
         format: int64

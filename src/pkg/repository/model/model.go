@@ -34,6 +34,7 @@ type RepoRecord struct {
 	RepositoryID    int64     `orm:"pk;auto;column(repository_id)" json:"repository_id"`
 	Name            string    `orm:"column(name)" json:"name"`
 	ProjectID       int64     `orm:"column(project_id)"  json:"project_id"`
+	Logo            string    `orm:"column(logo)" json:"logo"`
 	Description     string    `orm:"column(description)" json:"description"`
 	FullDescription string    `orm:"column(full_description)" json:"full_description"`
 	PullCount       int64     `orm:"column(pull_count)" json:"pull_count"`

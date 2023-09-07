@@ -232,12 +232,30 @@ func (r *repositoryAPI) UpdateRepository(ctx context.Context, params operation.U
 	if err != nil {
 		return r.SendError(ctx, err)
 	}
-	if err := r.repoCtl.Update(ctx, &repomodel.RepoRecord{
-		RepositoryID:    repository.RepositoryID,
-		Name:            repository.Name,
-		Description:     params.Repository.Description,
-		FullDescription: params.Repository.FullDescription,
-	}, "Description", "FullDescription"); err != nil {
+
+	repoRecord := &repomodel.RepoRecord{
+		RepositoryID: repository.RepositoryID,
+		Name:         repository.Name,
+	}
+
+	var properties []string
+
+	if params.Repository.Description != "" {
+		properties = append(properties, "Description")
+		repoRecord.Description = params.Repository.Description
+	}
+
+	if params.Repository.FullDescription != "" {
+		properties = append(properties, "FullDescription")
+		repoRecord.FullDescription = params.Repository.FullDescription
+	}
+
+	if params.Repository.Logo != "" {
+		properties = append(properties, "Logo")
+		repoRecord.Logo = params.Repository.Logo
+	}
+
+	if err := r.repoCtl.Update(ctx, repoRecord, properties...); err != nil {
 		return r.SendError(ctx, err)
 	}
 	return operation.NewDeleteRepositoryOK()

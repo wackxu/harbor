@@ -24,6 +24,7 @@ func (r *RepoRecord) ToSwagger() *models.Repository {
 		CreationTime:    createTime,
 		Description:     r.Description,
 		FullDescription: r.FullDescription,
+		Logo:            r.Logo,
 		ID:              r.RepositoryID,
 		Name:            r.Name,
 		ProjectID:       r.ProjectID,
